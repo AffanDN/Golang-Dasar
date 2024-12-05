@@ -159,3 +159,51 @@ Welcome to Go-Lang Dasar :)
 - && : dan
 - || : atau
 - !  : Kebalikan
+
+## Tipe Data Array
+- Array adalah tipe data yang berisikan kumpulan data dengan tipe data yang sama
+- Saat Membuat Array, kita perlu menentukan jumlah data yang bisa ditampung oleh Array tersebut
+- Daya tampung Array tidak bisa bertambah setelah Array dibuat
+- Dapat membuat Array secara langsung saat deklarasi variabel
+
+    ### Function Array
+    - `len(array)` : Untuk mendapatkan panjang array
+    - `array[index]`: Mendapat data di posisi index
+    - `array[index] = value`: Mengubah data di posisi index
+    
+## Tipe Data Slice
+- Tipe data Slice adalah potongan dari Array
+- Slice mirip dengan array, yang membedakan adalah ukuran Slice bisa berubah
+- Slice dan Array selalu terkoneksi, dimana Slice adalah data yang mengakses sebagian atau seluruh data di array
+
+## Detail tipe data Slice
+- Tipe Data Slice memiliki 3 data, yaitu pointer, length dan capacity
+- Pointer adalah penunjuk data pertama di array para slice
+- Length adalah panjang dari slice
+- Capacity adalah kapasitas dari slice (dari pointer sampai akhir), dimana length tidak boleh dari capacity
+
+    ### Membuat Slice dari Array
+    - `array[low:high]`: Membuat slice dari array dimulai dari index low sampai index sebelum high
+    - `array[low:]`: Membuat slice dari array dimulai dari index low sampai index terakhir di array
+    - `array[:high]`: Membuat slice dari array dimulai index 0 sampai index sebelum high
+    - `array[:]`: Membuat slice dari array dimulai index 0 sampai index terakhir di array
+
+    ### Function di Slice
+    - `len(slice)`: untuk mendapatkan panjang
+    - `cap(slice)`: untuk mendapatkan kapasitas dari pointer pertama
+    - `append(slice, data)`: Membuat slice baru dengan menambah data ke posisi terakhir slice, jika kapasitas sudah penuh, maka akan membuat array baru
+    - `make([]typedata, length, capacity)`: Membuat Slice baru
+    - `copy(destination, source)`: menyalin slice dari source ke destination
+
+## Tipe Data Map
+- Pada Array atau Slice, untuk mengakses data, kita menggunakan index Number dimulai dari 0
+- Map adalah tipe data lain yang berisikan sekumpulan data yang sama, namun kita bisa menentukan jenis tipe data index yang kita gunakan
+- Sederhananya, Map adalah tipe data kumpulan key-value (kata kunci - nilai), dimana kata kuncinya bersifat unik, tidak boleh sama
+- Berbeda dengan Array dan Slice, jumlah data yang kita masukan kedalam Map boleh sebanyak-banyaknya, asalkan kata kuncinya berbeda. Jika kita gunakan kata kunci sama, maka secara otomatis data sebelumnya akan diganti dengan data baru
+
+## Function Map
+- `len(map)` : untuk mendapatkan jumlah data di map
+- `map[key]` : mengambil data di map dengan key
+- `map[key] = value` : mengubah data di map dengan key
+- `make(map[TypeKey]TypeValue)` : membuat map baru
+- `delete(map, key)` : menghapus data di map dengan key
