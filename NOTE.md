@@ -207,3 +207,33 @@ Welcome to Go-Lang Dasar :)
 - `map[key] = value` : mengubah data di map dengan key
 - `make(map[TypeKey]TypeValue)` : membuat map baru
 - `delete(map, key)` : menghapus data di map dengan key
+
+## If Expression
+- If adalah salah satu kunci yang digunakan untuk percabangan
+- Percabangan artinya kita bisa mengeksekusi kode program tertentu ketika suatu kondisi terpenuhi
+- Hampir semua bahasa pemrograman mendukung if expression
+
+    ### Else Expression
+    - Blok if akan dieksekusi ketika kondisi if bernilai true
+    - Kadang kita ingin melakukan eksekusi program tertentu jika kondisi bernilai false
+    - Hal ini bisa dilakukan menggunakan else expression
+
+    ### Else if expression
+    - Kadang dalam if, kita butuh membuat beberapa kondisi
+    - Kasus seperti ini, kita dapat menggunakan else if expression
+
+    ### If dengan Short Statement
+    - If mendukung short statement sebelum kondisi
+    - Hal ini sangat cocok untuk membuat statement yang sederhana sebelum melakukan pengecekan terhadap kondisi
+
+## Switch Expression
+- Selain if expression, untuk melakukan percabangan, kita juga bisa menggunakan switch expression
+- Switch expression sangat sederhana dibandingkan if
+- Biasanya switch expression digunakan untuk melakukan pengecekan ke kondisi dalam satu variable
+
+    ### Switch dengan Short Statement
+    - Sama dengan If, Switch juga mendukung short statement sebelum variable yang akan dicek kondisinya
+
+    ### Switch Tanpa Kondisi
+    - Kondisi di switch expression tidak wajib
+    - Jika kita tidak menggunakan kondisi di switch expression, kita bisa menambahkan kondisi tersebut disetiap casenya
