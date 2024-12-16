@@ -295,3 +295,29 @@ Welcome to Go-Lang Dasar :)
 ## Slice Parameter
 - Kadang ada kasus dimana kita menggunakan variadic function, namun memiliki variable berupa slice
 - Kita dapat menjadikan slice sebagai vararg parameter
+
+## Function Value
+- Function adalah first class citizen
+- Function juga merupakan tipe data, dan bisa disimpan dalam variabel
+
+## Function as Parameter
+- Function tidak hanya bisa kita simpan didalam variabel sebagai value
+- Namun juga bisa kita gunakan sebagai parameter untuk function lain
+
+    ## Function Type Declarations
+    - Kadang jika function terlalu panjang, agak ribet untuk menuliskannya didalam parameter
+    - Type Declarations juga bisa digunakan untuk membuat alias function, sehingga akan mempermudah kita menggunakan function sebagai parameter
+
+## Anonymous Function
+- Sebelumnya setiap membuat function, kita akan selalu memberikan sebuah nama pada function tersebut
+- Namun kadang ada kalanya lebih mudah membuat function secara langsung di variabel atau parameter tanpa harus membuat function terlebih dahulu
+- Hal tersebut dinamakan anonymous function, atau function tanpa nama
+
+## Recursive Function
+- Recursive Function adalah function yang memanggil function dirinya sendiri
+- Kadang dalam pekerjaan, kita sering menemui kasus dimana menggunakan recursive function lebih mudah dibandingkan tidak menggunakan recursive function
+- Contoh kasus yang lebih mudah diselesaikan menggunakan recursive adalah Factorial
+
+## Closure
+- Closure adalah kemampuan sebuah function berinteraksi dengan data-data disekitarnya dalam scope yg sama
+- Harap gunakan fitur closure ini dengan bijak saat kita membuat aplikasi 
