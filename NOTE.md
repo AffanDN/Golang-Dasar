@@ -237,3 +237,61 @@ Welcome to Go-Lang Dasar :)
     ### Switch Tanpa Kondisi
     - Kondisi di switch expression tidak wajib
     - Jika kita tidak menggunakan kondisi di switch expression, kita bisa menambahkan kondisi tersebut disetiap casenya
+
+## For Loops
+- Perulangan
+
+    ### For Statement
+    - Dalam for, kita dapat menambahkan statement. Dimana terdapat 2 statement yang bisa ditambahkan di For:
+        - Init Statement, yaitu statement sebelum for dieksekusi
+        - Post Statement, yaitu statement yang akan selalu dieksekusi di akhir tiap perulangan
+    
+    ### For Range
+    - For bisa digunakan untuk melakukan iterasi terhadap semua data collection
+    - Data collection contohnya Array, Slice dan Map
+
+## Break and Continue
+- Break & Continue adalah kata kunci yang bisa digunakan dalam perulangan
+- Break digunakan untuk menghentikan seluruh perulangan
+- Continue adalah digunakan untuk menghentikan perulangan yang berjalan dan langsung melanjutkan ke perulangan selanjutnya
+
+## Function 
+- Sebelumnya kita sudah mengenal sebuah function yang wajib dibuat agar program kita bisa berjalan, yaitu Function main
+- Function adalah sebuah blok kode yang sengaja dibuat dalam program agar bisa digunakan berulang-ulang
+- Cara membuat function sangat sederhana, hanya dengan menggunakan kata kunci func lalu diikuti dengan nama function nya dan blok kode isi function nya
+- Setelah Membuat Function, kita bisa mengeksekusi function tersebut dengan memanggilnya menggunakan kata kunci nama function nya diikuti dengan tanda kurung buka dan kurung tutup
+
+    ### Function Parameter
+    - Saat membuat function kita membutuhkan data dari luar / external, yang dimana kita bisa sebut parameter
+    - Kita bisa menambahkan parameter di function, bisa lebih dari satu
+    - Parameter tidaklah wajib, jadi kita bisa membuat function tanpa parameter seperti sebelumnya yang sudah kita buat
+    - Namun jika kita menambahkan parameter di function, maka ketika memanggil function tersebut, kita wajib memasukan data ke parameternya
+
+    ### Function Return Value
+    - Function Bisa Mengembalikan Data
+    - Untuk memberitahu bahwa function mengembalikan data, kita harus menuliskan tipe data kembalian dari function tersebut
+    - Jika function tersebut kita deklarasikan dengan tipe data pengembalian, maka wajib didalam function nya kita harus mengembalikan data
+    - Untuk mengembalikan data dari function, kita bisa menggunakan kata kunci return, diikuti dengan datanya
+
+    ### Returning Multiple Value
+    - Function tidak hanya dapat mengembalikan satu value, tapi juga dapat mengembalika satu value
+    - Untuk memberitahu jika function mengembalikan multiple value, kita harus menulis semua tipe data return valuenya di function
+
+        ### Menghiraukan Return Value
+        - Multiple return value wajib ditangkap semua valuenya
+        - Jika kita ingin menghiraukan return value tersebut, kita bisa menggunakan tanda _ (underscore)
+
+## Named Return Values
+- Biasanya saat kita memberitahu bahwa sebuah function mengembalikan value, maka kita hanya mendeklarasikan tipe data return value di function
+- Namun kita juga bisa membuat variabel secara langsung di tipe data return functionnya
+
+## Variadic Function
+- Parameter yang berada di posisi terakhir, memiliki kemampuan dijadikan sebuah varargs
+- Varargs artinya datanya bisa menerima lebih dari satu input, atau anggap saja semacam Array.
+- Apa bedanya dengan parameter biasa dengan tipe data Array ?
+    - Jika parameter tipe Array, kita wajib membuat array terlebih dahulu sebelum mengirimkan ke function
+    - Jika parameter menggunakan varargs, kita bisa langsung mengirim datanya, jika lebih dari satu cukup gunakan tanda koma
+
+## Slice Parameter
+- Kadang ada kasus dimana kita menggunakan variadic function, namun memiliki variable berupa slice
+- Kita dapat menjadikan slice sebagai vararg parameter
