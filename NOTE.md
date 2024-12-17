@@ -321,3 +321,30 @@ Welcome to Go-Lang Dasar :)
 ## Closure
 - Closure adalah kemampuan sebuah function berinteraksi dengan data-data disekitarnya dalam scope yg sama
 - Harap gunakan fitur closure ini dengan bijak saat kita membuat aplikasi 
+
+## Defer, Panic dan Recover
+- Defer
+    - Defer Function adalah function yang bisa kita jadwalkan untuk dieksekusi setelah sebuah function selesai dieksekusi
+    - Defer function akan selalu dieksekusi walaupun terjadi error di function yang di eksekusi
+- Panic
+    - Panic Function adalah function yang bisa kita gunakan untuk menghentikan program
+    - Panic Function biasanya dipanggil ketika terjadi panic pada saat program kita berjalan
+    - Saat panic function dipanggil, program akan terhenti, namun defer function tetap akan dieksekusi
+- Recover
+    - Recover adalah function yang bisa kita gunakan untuk menangkap data panic
+    - Dengan recover proses panic akan terhenti, sehingga program akan tetap berjalan 
+
+## Struct
+- Struct adalah sebuah template data yang digunakan untuk menggabungkan nol atau lebih tipe data lainnya dalam satu kesatuan
+- Struct biasanya representasi data dalam program aplikasi yang kita buat
+- Data di struct disimpan dalam field
+- Sederhananya struct adalah kumpulan dari field
+
+    ### Membuat Data Struct
+    - Struct adalah template data atau prototype data
+    - Struct tidak bisa langsung digunakan
+    - Namun kita bisa membuat data / object dari struct yang telah kita buat
+
+    ### Struct Literals
+    - Sebelumnya kita telah membuat data dari struct, namun sebenarnya ada banyak cara yang bisa kita gunakan untuk membuat data dari struct
+    
