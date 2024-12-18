@@ -348,3 +348,75 @@ Welcome to Go-Lang Dasar :)
     ### Struct Literals
     - Sebelumnya kita telah membuat data dari struct, namun sebenarnya ada banyak cara yang bisa kita gunakan untuk membuat data dari struct
     
+    ### Struct Method
+    - Struct adalah tipe data seperti tipe data lainnya, dia bisa digunakan sebagai parameter untuk function
+    - Namun jika kita ingin menambahkan method kedalam structs, sehingga seakan-akan sebuah struct memiliki function
+    - Method adalah function
+
+## Interface
+- Interface adalah tipe data Abstract, dia tidak memiliki implementasi langsung
+- Sebuah interface berisikan definisi-definisi method
+- Biasanya interface digunakan sebagai kontrak
+
+    ### Implementasi Interface
+    - Setiap tipe data yang sesuai dengan kontrak interface, secara otomatis dianggap sebagai interface tersebut
+    - Sehingga kita tidak perlu mengimplementasikan interface secara manual
+    - Hal ini agak berbeda dengan bahasa pemrograman lain yang ketika membuat interface, kita harus menyebutkan secara eksplisit akan menggunakan interface mana
+
+    ### Interface Kosong
+    - Golang bukanlah bahasa pemrograman yang berorientasi objek
+    - Biasanya dalam pemrograman berorientasi objek, ada satu data parent di puncak yang bisa dianggap sebagai semua implementasi data yang ada di bahasa pemrograman tersebut
+    - Contoh di java ada java.lang.Object
+    - Untuk menangani kasus seperti ini, di Golang kita bisa menggunakan interface kosong
+    - Interface Kosong adalah interface yang tidak memiliki deklarasi method satu pun, hal ini membuat secara otomatis semua tipe data akan menjadi implementasinya
+    - Interface kosong, juga memiliki type alias bernama any
+
+        ### Penggunaan Interface Kosong
+        - Ada banyak contoh penggunaan interface kosong di Golang, seperti:
+            - `fmt.Println(a...interface{})`
+            - `panic(v interface{})`
+            - `recover() interface{}`
+            - Dan lain-lain
+## Nil
+- Biasanya didalam bahasa pemrograman lain, object yang belum diinisialisasi maka secara otomatis nilainya adalah null atau nil
+- Berbeda dengan Go-Lang, di Go-Lang saat kita buat variabel dengan tipe data tertentu, maka secara otomatis akan dibuatkan default valuenya
+- Namun di Golang ada data Nil, yaitu data kosong
+- Nil sendiri hanya bisa digunakan di beberapa tipe data, seperti interface, function map, slice, pointer dan channel
+
+## Type Assertions
+- Type Assertions merupakan kemampuan merubah tipe data menjadi tipe data yang diinginkan
+- Fitur ini sering kali digunakan ketika kita bertemu dengan data interface kosong
+
+    ### Type Assertions Menggunakan Switch
+    - Saat salah menggunakan type assertions, maka bisa berakibat terjadi panic di aplikasi kita
+    - Jika panic dan tidak ter-recover, maka otomatis program kita akan mati
+    - Agar lebih aman, sebaiknya kita menggunakan switch expression untuk melakukan type assertions
+
+## Pointer
+- Pointer adalahh kemampuan membuat reference ke lokasi data di memori yang sama, tanpa menduplikasi data yang sudah ada
+- Sederhananya, dengan kemampuan pointer, kita bisa membuat pass by reference
+
+    ### Pass by Value
+    - Secara default di Golang semua variable itu di passing by value, bukan by reference
+    - Artinya, jika kita ingin mengirim sebuah variable kedalam function, method atau variabel lain, sebenarnya yang dikirim adalah duplikasi valuenya
+
+    ### Operator (&)
+    - Untuk membuat sebuah variable dengan nilai pointer ke variabel yang lain, kita bisa menggunakan operator & diikuti dengan nama variablenya
+
+    ### Asterisk Operator (*)
+    - Saat kita mengubah variabel pointer, maka yang berubah hanya variable tersebut
+    - Semua variable yang mengacu ke data yang sama tidak akan berubah
+    - Jika kita ingin mengubah seluruh variable yang mengacu ke data tersebut, kita bisa menggunakan operator *
+
+    ### Operator New
+    - Sebelumnya untuk membuat pointer dengan menggunakan operator &
+    - Golang juga memiliki function new yang bisa digunakan untuk membuat pointer
+    - Namun function new hanya mengembalikan pointer ke data kosong, artinya tidak ada data awal
+
+    ### Pointer di Function
+    - Saat kita membuat parameter di function, secara default adalah pass by value, artinya data akan di copy lalu dikirim ke function tersebut
+    - Oleh karena itu, jika kita mengubah data didalam function, data aslinya tidak akan pernah berubah
+    - Hal ini membuat variabel menjadi aman, karena tidak akan bisa diubah
+    - Namun kadang kita ingin membuat function yang bisa mengubah data asli parameter tersebut
+    - Untuk melakukan ini, kita menggunakan pointer di function
+    - Untuk menjadikan sebuah parameter sebagai pointer, kita bisa menggunakan operator * di parameternya
