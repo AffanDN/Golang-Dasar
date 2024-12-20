@@ -420,3 +420,42 @@ Welcome to Go-Lang Dasar :)
     - Namun kadang kita ingin membuat function yang bisa mengubah data asli parameter tersebut
     - Untuk melakukan ini, kita menggunakan pointer di function
     - Untuk menjadikan sebuah parameter sebagai pointer, kita bisa menggunakan operator * di parameternya
+
+    ### Pointer di Method
+    - Walaupun method akan menempel di struct, tapi sebenarnya data struct yang diakses didalam method adalah pass by value
+    - Sangat direkomendasikan menggunakan pointer di method, sehingga tidak boros memory karena harus selalu diduplikasi ketika memanggil method
+
+## Package dan Import
+- Package adalah tempat yang bisa digunakan untuk mengorganisir kode program yang kita buat di Golang
+- Dengan menggunakan package, kita bisa merapikan kode program yang kita buat
+- Package sendiri sebenarnya hanya direktori folder di sistem operasi kita
+
+## import
+- Secara standar, file Golang hanya bisa mengakses file golang lainnya yang berada dalam package yang sama
+- Jika kita ingin mengakses file golang yang berada di luar package, maka kita bisa menggunakan import
+
+## Access Modifier
+- Di bahasa pemrograman lain, biasanya ada kata kunci yang bisa digunakan untuk menentukan access modifier terhadap suatu function atau variable
+- Di Golang, untuk menentukan access modifier, cukup dengan nama function atau variable
+- **Jika namanya diawali dengan huruf besar, maka artinya bisa diakses dari package lain, jika dimulai dengan huruf kecil, artinya tidak bisa diakses dari package lain**
+
+## Package Initialization
+- Saat kita membuat package, kita bisa membuat sebuah function yang akan diakses ketika package kita diakses
+- Ini sangat cocok ketika contohnya, jika package kita berisi function-function untuk berkomunikasi dengan database, kita membuat function inisialisasi untuk membuka koneksi ke database
+- Untuk membuat function yang diakses secara otomatis ketika package diakses, kita cukup membuat function dengan nama init
+
+## Blank Identifier
+- Kadang kita hanya ingin menjalankan init function di package tanpa harus mengeksekusi salah satu function yang ada di package
+- Secara default, Golang akan komplen ketika ada package yang diimport namun tidak digunakan 
+- Untuk menangani hal tersebut, kita bisa menggunakan blank identifier (_) sebelum nama package ketika melakukan import
+
+## Error
+### Error Interface
+- Golang memiliki interface yang digunakan sebagai kontrak untuk membuat error, nama interface nya adalah error
+    ### Membuat Error
+    - Untuk membuat error, kita tidak perlu manual
+    - Golang sudah menyediakan library untuk membuat helper secara mudah, yang terdapat di package errors
+
+    ### Membuat Custom Error
+    - Karena error adalah sebuah interface, jadi jika kita ingin membuat error sendiri, kita bisa membuat struct yang mengikuti kontrak dari interface error
+    
